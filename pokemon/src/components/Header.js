@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css";
+import "./Header.scss";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Grass from "./Grass";
 import Contact from "./Contact";

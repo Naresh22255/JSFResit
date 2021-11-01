@@ -1,5 +1,5 @@
 import React from "react";
-import "./Grass.css";
+import "./Grass.scss";
 
 function Grass() {
   return (

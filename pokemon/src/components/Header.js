@@ -5,6 +5,8 @@ import Grass from "./Grass";
 import Contact from "./Contact";
 import Home from "./Home";
 
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+
 function Header() {
   return (
     <div className="header">
@@ -13,15 +15,31 @@ function Header() {
         <div>
           <nav>
             <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/grass">Grass</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+              <div className="header__container">
+                <div>
+                  <li>
+                    <Link to="/">Home</Link>
+                  </li>
+                </div>
+                <div>
+                  <li>
+                    <Link to="/grass">Grass</Link>
+                  </li>
+                </div>
+                <div>
+                  <li>
+                    <Link to="/contact">Contact</Link>
+                  </li>
+                </div>
+
+                <form>
+                  <textarea placeholder="Search..."></textarea>
+                  <input type="submit" />
+                </form>
+                <div>
+                  <MenuRoundedIcon />
+                </div>
+              </div>
             </ul>
           </nav>
 

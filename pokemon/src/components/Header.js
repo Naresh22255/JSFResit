@@ -12,49 +12,39 @@ function Header() {
     <div className="header">
       {/* <h2>Header</h2> */}
       <Router>
-        <div>
-          <nav>
-            <ul>
-              <div className="header__container">
-                <div>
-                  <li>
-                    <Link to="/">Home</Link>
-                  </li>
-                </div>
-                <div>
-                  <li>
-                    <Link to="/grass">Grass</Link>
-                  </li>
-                </div>
-                <div>
-                  <li>
-                    <Link to="/contact">Contact</Link>
-                  </li>
-                </div>
+        <nav>
+          <div className="header__container">
+            <div className="header__container--child">
+              <Link to="/">Home</Link>
+            </div>
+            <div className="header__container--child">
+              <Link to="/grass">Grass</Link>
+            </div>
+            <div className="header__container--child">
+              <Link to="/contact">Contact</Link>
+            </div>
 
-                <form>
-                  <textarea placeholder="Search..."></textarea>
-                  <input type="submit" />
-                </form>
-                <div>
-                  <MenuRoundedIcon />
-                </div>
-              </div>
-            </ul>
-          </nav>
+            <form>
+              <textarea placeholder="Search..."></textarea>
+              <input type="submit" />
+            </form>
+            <div>
+              <MenuRoundedIcon />
+            </div>
+          </div>
+        </nav>
 
-          <Switch>
-            <Route path="/grass">
-              <Grass />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
-        </div>
+        <Switch>
+          <Route path="/grass">
+            <Grass />
+          </Route>
+          <Route path="/contact">
+            <Contact />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </Router>
     </div>
   );

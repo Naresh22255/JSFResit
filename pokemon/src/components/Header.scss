@@ -1,6 +1,14 @@
-.header {
+.header nav {
   display: flex;
-  /* flex-direction: row; */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.header__container {
+  display: flex;
+}
+
+.header__container--child {
+  margin: 10px;
 }

@@ -10,35 +10,41 @@ function ApiFetch() {
   //       `https://api.pokemontcg.io/v1/cards?setCode=base1`
   //     );
   //     let user = await response.data;
+
+  //     console.log(user.cards[1].name);
   //     setPosts(user);
-  //     console.log(posts.cards);
+  //     console.log(posts);
   //   }
 
   useEffect(() => {
     // fetchData();
 
-    axios
+    const request = axios
       .get("https://api.pokemontcg.io/v1/cards?setCode=base1")
       .then((response) => {
-        setPosts(response);
-        console.log(response);
+        setPosts(response.data.cards);
+        console.log(response.data.cards);
+        return request;
       })
       .catch((err) => {
         console.log(err);
-      });
+      }, []);
 
     // return () => {
     //   cleanup;
     // };
-  }, [posts]);
+  }, []);
+
+  //   console.log(name);
+
   return (
     <div>
       <h2>Fetching Api</h2>
-      {/* <ul>
-        {posts.map((post) => (
-          <li key={post.cards}>{post}</li>
+      <ul>
+        {Object.keys(posts).map((name, index) => (
+          <li key={index}>{name}</li>
         ))}
-      </ul> */}
+      </ul>
     </div>
   );
 }

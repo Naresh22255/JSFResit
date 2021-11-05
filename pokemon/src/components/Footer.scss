@@ -25,4 +25,8 @@ $fontsize: 18px;
   background-color: $bgcolor;
   color: $textcolor;
   font-size: $fontsize;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 0 auto;
 }
